@@ -21,7 +21,7 @@ async function main(): Promise<void> {
           })
           break
         case 'move':
-          await mv(cachePath, targetDir, { force: true })
+          await mv(cachePath, targetPath, { force: true })
           break
       }
 
