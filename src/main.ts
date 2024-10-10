@@ -15,13 +15,13 @@ async function main(): Promise<void> {
       switch (options.strategy) {
         case 'copy-immutable':
         case 'copy':
-          await cp(cachePath, targetPath, {
+          await cp(cachePath, targetDir, {
             copySourceDirectory: false,
             recursive: true,
           })
           break
         case 'move':
-          await mv(cachePath, targetPath, { force: true })
+          await mv(cachePath, targetDir, { force: true })
           break
       }
 
